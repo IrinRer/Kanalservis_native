@@ -40,9 +40,9 @@ const Label = styled.Text`
 const Input = styled.TextInput`
   border-width: 4px;
   border-style: solid;
-  border-color: black;
-  /* border-color: ${(props) => props.color};  */
+  border-color: ${(props) => props.color || 'black'}; 
   border-radius: 10px;
+  color: black;
   padding: 3px;
   font-weight: 800;
   background-color: ${GRAY};

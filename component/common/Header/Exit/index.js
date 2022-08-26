@@ -1,24 +1,24 @@
 import styled from "styled-components/native";
-import { Text} from "react-native";
 import Exit from "../../../../assets/icons/exit.svg";
+import { useDispatch } from "react-redux";
+import { resetAuthorization } from "../../../../store/auth/slice";
 
-const Button = styled.Button`
+const ButtonCustom = styled.TouchableOpacity`
   border: none;
-  background-color: red;
-  width: 100px;
+  background-color: transparent;
 `;
 
 const ExitComponent = () => {
-  //   const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
 
-  //   const handleClick = () => {
-  //     dispatch(resetAuthorization());
-  //   };
+  const handleClick = () => {
+    dispatch(resetAuthorization());
+  };
 
   return (
-    <Button title={<Exit width={50} height={118} />}>
-      {/* <Exit width={50} height={118} /> */}
-    </Button>
+    <ButtonCustom onPress={handleClick}>
+      <Exit width={50} height={118} />
+    </ButtonCustom>
   );
 };
 

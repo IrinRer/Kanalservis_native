@@ -2,6 +2,8 @@ import styled from "styled-components/native";
 import Logo from "../../../assets/icons/logo_short.svg";
 import Exit from "../../../assets/icons/exit.svg";
 import { CREAM_COLOR_LIGHT } from "../../../constants/common";
+import ButtonComponent from "../../Auth/Button";
+import ExitComponent from "./Exit";
 
 const Wrapper = styled.View`
   display: flex;
@@ -22,7 +24,8 @@ const Header = () => {
   return (
     <Wrapper>
       <Logo width={70} height={118} />
-      <Exit onPress={() => console.log("fffff")} />
+      {/* <Exit onClick={handlePress} /> */}
+      <ExitComponent/>
     </Wrapper>
   );
 };
