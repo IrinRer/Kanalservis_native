@@ -1,13 +1,13 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import Auth from "./component/Auth/index.js";
-import Header from './component/common/Header/index.js'
+import { Provider } from "react-redux";
+import CreateRoutes from "./container/Routes/index.js";
+import {store} from './store/index';
 
-export default function App() {
+function App() {
   return (
-    <View>
-      <Header />
-      <Auth/>
-    </View>
-  )
+    <Provider store={store}>
+      <CreateRoutes />
+    </Provider>
+  );
 }
+
+export default App;

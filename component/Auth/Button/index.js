@@ -1,7 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { Text, TouchableOpacity } from "react-native";
-import { CREAM_COLOR, CREAM_COLOR_LIGHT } from "../../../constants/common";
+import { CREAM_COLOR } from "../../../constants/common";
+import { authorization } from "../../../store/auth/slice";
 
 const ButtonCustom = styled.TouchableOpacity`
   border-radius: 10px;
@@ -21,12 +22,11 @@ const CustomText = styled.Text`
 `;
 
 const ButtonComponent = () => {
-  // const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // dispatch(authorization());
-    console.log("submit");
+    e.preventDefault();
+    dispatch(authorization());
   };
   return (
     <ButtonCustom onPress={handleSubmit}>

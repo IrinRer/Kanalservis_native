@@ -1,6 +1,8 @@
+import { Text } from "react-native";
+
 const Home = () => {
     return (
-        <p>lgfg</p>
+        <Text>lgfg</Text>
     )
 }
 
