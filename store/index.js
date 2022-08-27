@@ -8,5 +8,5 @@ export const store = configureStore({
     // posts: PostsReducer,
     // photos: PhotosReducer
   },
-  // devTools: process.env.NODE_ENV !== "production",
+  devTools: process.env.NODE_ENV !== "production",
 });

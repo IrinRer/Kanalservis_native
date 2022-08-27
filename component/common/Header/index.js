@@ -1,8 +1,6 @@
 import styled from "styled-components/native";
 import Logo from "../../../assets/icons/logo_short.svg";
-import Exit from "../../../assets/icons/exit.svg";
-import { CREAM_COLOR_LIGHT } from "../../../constants/common";
-import ButtonComponent from "../../Auth/Button";
+import { CREAM_COLOR } from "../../../constants/common";
 import ExitComponent from "./Exit";
 
 const Wrapper = styled.View`
@@ -14,7 +12,7 @@ const Wrapper = styled.View`
   padding: 0px 10px;
   align-items: center;
   justify-content: space-between;
-  background-color: ${CREAM_COLOR_LIGHT};
+  background-color: ${CREAM_COLOR};
   svg {
     cursor: pointer;
   }
@@ -24,7 +22,6 @@ const Header = () => {
   return (
     <Wrapper>
       <Logo width={70} height={118} />
-      {/* <Exit onClick={handlePress} /> */}
       <ExitComponent/>
     </Wrapper>
   );
