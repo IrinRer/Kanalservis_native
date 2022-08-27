@@ -24,10 +24,10 @@ const CustomText = styled.Text`
 const ButtonComponent = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     dispatch(authorization());
   };
+
   return (
     <ButtonCustom onPress={handleSubmit}>
       <CustomText>Submit</CustomText>

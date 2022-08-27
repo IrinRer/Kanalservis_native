@@ -19,7 +19,8 @@ export const usersSlice = createSlice({
     },
     [fetchPostsAction.fulfilled.type]: (state, action) => {
       state.posts = action.payload.filter(
-        (item, i) => payload.findIndex((a) => a.userId === item.userId) === i
+        (item, i) =>
+          action.payload.findIndex((a) => a.userId === item.userId) === i
       );
       state.loading = false;
     },

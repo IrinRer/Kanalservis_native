@@ -40,7 +40,7 @@ const Label = styled.Text`
 const Input = styled.TextInput`
   border-width: 4px;
   border-style: solid;
-  border-color: ${(props) => props.color || 'black'}; 
+  border-color: ${(props) => props.color || "black"};
   border-radius: 10px;
   color: black;
   padding: 3px;
@@ -60,7 +60,6 @@ const Auth = () => {
 
   const handleChangeLogin = (text) => {
     dispatch(changeInputLogin(text));
-    console.log(text)
   };
 
   const handleChangePassword = (text) => {
@@ -73,7 +72,6 @@ const Auth = () => {
       <Label>login</Label>
       <Input
         autoFocus
-        type="email"
         onChangeText={handleChangeLogin}
         value={loginValue}
         color={isAuth !== "no" ? BLUE_WATER : "red"}

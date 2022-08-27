@@ -14,7 +14,6 @@ export const authorizationSlice = createSlice({
   initialState,
   reducers: {
     authorization: (state) => {
-      console.log(state.auth);
       if (
         state.inputLogin === state.login &&
         state.inputPassword === state.password

@@ -1,8 +1,10 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import styled from 'styled-components/native';
-import { BLUE_WATER } from '../../../constants/common';
-import { getUsers } from '../../../store/users/selectors';
+import React from "react";
+import { useSelector } from "react-redux";
+import { View } from "react-native";
+import styled from "styled-components/native";
+import { BLUE_WATER } from "../../../constants/common";
+import { getUsers } from "../../../store/users/selectors";
+import Posts from "../../Post";
 
 const Wrapper = styled.View`
   width: 100%;
@@ -18,14 +20,7 @@ const Wrapper = styled.View`
 const Paragraph = styled.Text`
   font-weight: 800;
   font-size: 16px;
-  line-height: 30px;
-`;
-
-const WrapperParagraph = styled.View`
-  /* @media ${(props) => props.theme.tablet} {
-    display: flex;
-    flex-direction: column;
-  } */
+  line-height: 40px;
 `;
 
 const Item = () => {
@@ -35,13 +30,12 @@ const Item = () => {
     <>
       {users.map((item) => {
         return (
-          <Wrapper key={item.name} >
-            <WrapperParagraph>
-              {/* <Photos id={item.id} /> */}
+          <Wrapper key={item.name}>
+            <View>
               <Paragraph>Auth: {item.name}</Paragraph>
               <Paragraph>Company: {item.company.name} </Paragraph>
-            </WrapperParagraph>
-            {/* <Posts id={item.id} /> */}
+            </View>
+            <Posts id={item.id} />
           </Wrapper>
         );
       })}

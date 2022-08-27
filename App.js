@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import CreateRoutes from "./container/Routes/index.js";
-import {store} from './store/index';
+import { store } from "./store/index";
 
 function App() {
   return (

@@ -5,7 +5,7 @@ import { getAuth } from "../../../store/auth/selectors";
 
 const PrivateRoute = ({ children: Component }) => {
   const isAuth = useSelector(getAuth);
-  return <>{isAuth === "yes" ? Component : <Auth/>}</>;
+  return <>{isAuth === "yes" ? Component : <Auth />}</>;
 };
 
 export default PrivateRoute;

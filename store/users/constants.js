@@ -1,1 +1,1 @@
-export const USERS_SLICE_ALIAS = 'users';
+export const USERS_SLICE_ALIAS = "users";
