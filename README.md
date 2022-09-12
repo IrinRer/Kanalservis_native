@@ -1,34 +1,51 @@
-A test task from the Kanalservice company on React-native.
-1. Login: react
-2. Password: qwerty
+## Описание
+Проект создан для отображений данных, которые поступают с сервера. Посмотреть эти данные можно только авторизованный пользователь.
+Проект создает на React-native. 
 
-# Technologies
+Декстопная версия: https://github.com/IrinRer/Kanalservis
+
+1. Логин: react
+2. Пароль. Password: qwerty
+
+## Технологии
 1. React-native
 2. Redux (thunk, redux-toolkit)
 3. Styled components
 4. Axious
 
-# Getting Started
-Clone this repository:
+## Что было сделано
+1. Приватные роуты. 
+
+Есть страница на которой отображаются данные, но эти данные может посмотреть только авторизованный пользователь, если он не авторизован, то его перебрасывает на страницу с авторизацией.
+
+Навигация сделана через stack (StackNavigator). 
+
+``<Stack.Screen
+          name="Home"
+          component={() => (
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          )}
+        />``
+
+В данном примере я оборачиваю компонент Home (является страницей) в компонент PrivateRoute, который внутри себя проверяет авторизацию и если ее нет, то на страницу Home вход не происходит.
+
+## Как запустить
+1. Клонируете репозиторий
 
 ```
 git clone https://github.com/IrinRer/Kanalservis_native.git
 ```
-
-Install dependencies:
+2. Устанавливаете зависимости
 
 ```
 npm i
 ```
-
-Start React Native server:
-
-```
-npm start
-```
-
-Watch on Android:
+3. Запускаете проект на Android
 
 ```
 npm run android
 ```
+
+Я использовала Android Studio и Expo Go. 
